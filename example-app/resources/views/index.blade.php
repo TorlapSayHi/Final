@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <title>Book List</title>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <h1>Book List</h1>
-    <a href="{{ route('create') }}">Add New Book</a>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <a href="{{ route('create') }}">Add New Bookkkkkkkkkkkkkkkk</a>
+
     @if(session('success'))
         <p>{{ session('success') }}</p>
     @endif
