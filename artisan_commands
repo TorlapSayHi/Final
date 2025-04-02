@@ -1,0 +1,65 @@
+# Laravel Artisan Commands
+
+## 1. Laravel Framework
+php artisan --version           # ดูเวอร์ชันของ Laravel
+php artisan list                # ดูรายการคำสั่งทั้งหมด
+php artisan help <command>       # ดูคำอธิบายของคำสั่งที่ต้องการ
+
+## 2. Database Commands
+php artisan migrate             # รัน Migration
+php artisan migrate:rollback    # ยกเลิก Migration ล่าสุด
+php artisan migrate:reset       # ลบทุกตาราง
+php artisan migrate:refresh     # รีเซ็ตฐานข้อมูลแล้วรัน Migration ใหม่
+php artisan migrate:fresh       # ลบทุกตารางและสร้างใหม่
+php artisan db:seed             # รัน Seeder เพื่อเพิ่มข้อมูลตัวอย่าง
+php artisan migrate --seed      # รัน Migration และ Seeder พร้อมกัน
+php artisan make:migration create_books_table # สร้างไฟล์ Migration
+php artisan migrate:status      # ดูสถานะ Migration
+
+## 3. Model, Controller, View
+php artisan make:model Book                # สร้าง Model
+php artisan make:model Book -m             # สร้าง Model พร้อม Migration
+php artisan make:controller BookController # สร้าง Controller
+php artisan make:controller BookController --resource # สร้าง Controller แบบ Resource
+php artisan make:view books.index          # สร้าง View (Laravel 10 ขึ้นไป)
+
+## 4. Route Commands
+php artisan route:list        # ดู Route ทั้งหมด
+php artisan route:cache       # แคช Route
+php artisan route:clear       # ล้างแคช Route
+
+## 5. View & Cache Commands
+php artisan view:clear        # ล้างแคช View
+php artisan config:cache      # แคชไฟล์ config
+php artisan config:clear      # ล้างแคช config
+php artisan cache:clear       # ล้างแคชทั้งหมด
+
+## 6. Storage Commands
+php artisan storage:link      # เชื่อมโยง storage กับ public
+
+## 7. Authentication (Breeze & Jetstream)
+php artisan breeze:install               # ติดตั้ง Laravel Breeze
+php artisan jetstream:install livewire   # ติดตั้ง Jetstream + Livewire
+php artisan jetstream:install inertia    # ติดตั้ง Jetstream + Inertia
+
+## 8. Queue & Job Commands
+php artisan queue:work       # รัน Queue
+php artisan queue:restart    # รีสตาร์ท Queue Worker
+php artisan queue:clear      # ล้าง Queue
+php artisan make:job ProcessOrder # สร้าง Job
+
+## 9. Event & Listener Commands
+php artisan make:event OrderShipped           # สร้าง Event
+php artisan make:listener SendShipmentNotification # สร้าง Listener
+php artisan event:generate                     # สร้าง Event & Listener ที่ยังไม่มี
+
+## 10. Testing Commands
+php artisan make:test BookTest # สร้าง Unit Test
+php artisan test               # รัน Unit Test ทั้งหมด
+
+# คำสั่งที่ใช้บ่อย
+php artisan migrate:fresh --seed  # รีเซ็ตฐานข้อมูลแล้วรัน Seeder
+php artisan route:list             # ดู Route
+php artisan storage:link           # เชื่อมโยง Storage
+php artisan config:clear           # ล้างแคช Config
+php artisan queue:work             # รัน Queue Worker
