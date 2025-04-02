@@ -3,10 +3,40 @@
 <head>
     <title>Book List</title>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .firstBtn {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .firstBtn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
 </head>
 <body>
     <h1>Book List</h1>
-    <a href="{{ route('create') }}">Add New Bookkkkkkkkkkkkkkkk</a>
+    <form action="{{ route('create') }}" style="display:inline;">
+            <button type="submit" class="firstBtn">add</button>
+    </form>
 
     @if(session('success'))
         <p>{{ session('success') }}</p>
